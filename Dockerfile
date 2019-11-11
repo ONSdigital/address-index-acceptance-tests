@@ -1,4 +1,5 @@
 FROM openjdk:13-alpine
+ARG jar=address-index-acceptance-tests.jar
 WORKDIR /
-ADD 'address-index-acceptance-tests.jar' 'address-index-acceptance-tests.jar'
+COPY $jar 'address-index-acceptance-tests.jar'
 CMD java -jar address-index-acceptance-tests.jar
